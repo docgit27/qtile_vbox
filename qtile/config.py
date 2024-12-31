@@ -24,6 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
 import subprocess
 import os
 from libqtile import bar, layout, qtile, widget, extension, hook
@@ -104,7 +105,7 @@ keys = [
 	dmenu_font="Andika-10",
 	background="#000000",
 	foreground="#f22c40",
-	selected_background="#f22c40",
+	selected_background="#94090d",
 	selected_foreground="#ffffff",
 	dmenu_command="dmenu_run",
 	dmenu_bottom=True,
@@ -184,10 +185,10 @@ screens = [
         wallpaper_mode="fill",  #or "stretch" or "center" or "tile"
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
+                widget.CurrentLayout(fmt='Layout: <i>{}</i>'),
                 widget.GroupBox(),
-                widget.Prompt(),
                 widget.WindowName(),
+		widget.Prompt(record_history=True),
                 widget.Chord(
                     chords_colors={
                         "launch": ("#ff0000", "#ffffff"),
@@ -199,9 +200,22 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%a %I:%M %p %d-%m-%Y"),
-                widget.QuickExit(),
-            ],
+		widget.Spacer(length = 20),
+		widget.CryptoTicker(currency = "eur"),
+		widget.Spacer(length = 20),
+		widget.Memory(fmt = "RAM {}"),
+		widget.Spacer(length = 20),
+		widget.HDD(),
+                widget.HDDBusyGraph(),
+		widget.CPU(),
+		widget.CPUGraph(start_pos = "bottom", line_width = 1, fill_color = "#43a047", graph_color = "#43a047", border_color = "#168039", border_width = 1),
+                widget.Net(interface = "enp0S3", format = "{down: 6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}"),
+		widget.Clock(format=" %a %d-%m-%Y  %H:%M "),
+		widget.PulseVolume(),
+		widget.BatteryIcon(scale = 1.3),
+		widget.Spacer(length = 5),
+                widget.QuickExit(default_text = '[ poweroff ]', background = "#94090d", foreground = "#000000"),
+         	],
             24,
             #border_width=[1, 0, 1, 0],  # Draw top and bottom borders
             #border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
