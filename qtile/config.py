@@ -98,15 +98,16 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    #DmenuRun
+    # DmenuRun
     Key([mod], "d", lazy.run_extension(extension.DmenuRun(
     	dmenu_prompt="launch a program: ",
-	dmenu_font="Monospace 12",
+	dmenu_font="Andika-10",
 	background="#000000",
-	foreground="#3a98fc",
-	selected_background="#3a98fc",
+	foreground="#f22c40",
+	selected_background="#f22c40",
 	selected_foreground="#ffffff",
 	dmenu_command="dmenu_run",
+	dmenu_bottom=True,
     ))),
 ]
 
@@ -151,7 +152,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=3),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     layout.Stack(num_stacks=2),
@@ -164,6 +165,10 @@ layouts = [
     layout.TreeTab(),
     layout.VerticalTile(),
     layout.Zoomy(),
+    layout.Floating(),
+    layout.ScreenSplit(),
+    layout.Plasma(),
+    layout.MonadThreeCol()
 ]
 
 widget_defaults = dict(
