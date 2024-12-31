@@ -1,8 +1,8 @@
 #updating
 sudo apt update
 
-#installing
-sudo apt install python3 python3-pip python3-venv python3-v-sim python-dbus-dev libpangocairo-1.0-0 python3-xcffib python3-cairocffi libxkbcommon-dev libxkbcommon-x11-dev firefox-esr terminator alacritty dmenu git htop neofetch gparted -yy 
+#installing everything i need for qtile
+sudo apt install python3 python3-pip python3-venv python3-v-sim python-dbus-dev libpangocairo-1.0-0 python3-xcffib python3-cairocffi libxkbcommon-dev libxkbcommon-x11-dev -yy
 
 #creating a virtual environment for qtile
 mkdir -p ~/.local/src/
