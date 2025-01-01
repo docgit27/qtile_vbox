@@ -34,12 +34,10 @@ from libqtile.utils import guess_terminal
 from libqtile.layout import Floating
 
 @hook.subscribe.startup_once
-#or @hootk.subscribe.startup
+#or @hootk.subscribe.startup if at every restart of qtile
 def autostart():
-	home = os.path.expanduser("~")
-	subprocess.Popen(['picom', '--no-use-damage', '--config', f'{home}/.config/picom.conf'])
-	subprocess.Popen(['terminator'])
-	subprocess.Popen(['nitrogen', f'{home}/.config/qtile/backgrounds/', '--set-zoom-fill', '--random'])
+	home = os.path.expanduser("~/.config/qtile/autostart.sh")
+	subprocess.call(home)
 
 
 mod = "mod1"
@@ -224,12 +222,19 @@ screens = [
             #border_width=[1, 0, 1, 0],  # Draw top and bottom borders
             #border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
 	    opacity = 0.75,
-        ),
+	 ),
+     ),
+#uncomment this screen section if you have a second screen      
+    # Screen(
+	#top=bar.Bar(
+	#	)
+	# ),
+
+
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
-    ),
 ]
 
 # Drag floating layouts.

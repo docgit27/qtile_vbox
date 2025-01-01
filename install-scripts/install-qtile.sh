@@ -25,10 +25,17 @@ bin/pip install pulsectl_asyncio/
 mkdir ~/.local/bin/
 cp ~/.local/src/qtile_venv/bin/qtile ~/.local/bin/
 
-#creating a config file
-cd ~/.local/src/qtile_venv/qtile
+#creating a config file and a backgrounds folder
 mkdir ~/.config/qtile/
+cd ~/.config/qtile/
 touch config.py
+mkdir backgrounds/
 
+#copying config file and background folders into the new destinations
+cp ~/qtile_vbox/config.py ~/.config/qtile/config.py
+cp ~/qtile_vbox/backgrounds ~/.config/qtile/backgrounds/ 
+
+#removing the installation package
+rm -r ~/qtile_vbox/
 
  
