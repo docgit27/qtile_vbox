@@ -3,7 +3,7 @@
 sudo apt update
 
 #installing everything i need for qtile
-sudo apt install python3 python3-pip python3-venv python3-v-sim python-dbus-dev libpangocairo-1.0-0 python3-xcffib python3-cairocffi libxkbcommon-dev libxkbcommon-x11-dev pulseaudio -yy
+sudo apt install python3 python3-pip python3-venv python3-v-sim python-dbus-dev libpangocairo-1.0-0 python3-xcffib python3-cairocffi libxkbcommon-dev libxkbcommon-x11-dev pulseaudio fonts-symbola fonts-noto-color-emoji fonts-font-awesome -yy
 
 #creating a virtual environment for qtile, pulsectl and pulsectl-asyncio
 mkdir -p ~/.local/src/
