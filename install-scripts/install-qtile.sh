@@ -31,9 +31,10 @@ cd ~/.config/qtile/
 touch config.py
 mkdir backgrounds/
 
-#copying config file and background folders into the new destinations
-cp ~/qtile_vbox/config.py ~/.config/qtile/config.py
-cp ~/qtile_vbox/backgrounds ~/.config/qtile/backgrounds/ 
+#copying config files and background folders into the new destinations
+cp ~/qtile_vbox/qtile/config.py ~/.config/qtile/config.py
+cp ~/qtile_vbox/qtile/autostart.sh ~/.config/qtile/autostart.sh
+cp ~/qtile_vbox/qtile/backgrounds ~/.config/qtile/backgrounds/ 
 
 #removing the installation package
 rm -r ~/qtile_vbox/

@@ -1,0 +1,35 @@
+[global_config]
+  geometry_hinting = True
+  tab_position = bottom
+[keybindings]
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_darkness = 0.75
+    background_type = transparent
+    font = Monospace 12
+    foreground_color = "#00ff00"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
+  [[atelier forest]]
+    icon_bell = False
+    background_color = "#1B1918"
+    background_darkness = 0.75
+    background_type = transparent
+    font = Monospace 12
+    foreground_color = "#9C9491"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#f22c40:#f22c40:#7b9726:#c38418:#407ee7:#c33ff3:#3d97b8:#e6e2e0:#766e6b:#df5320:#7b9726:#c38418:#6666ea:#c33ff3:#3d97b8:#f1efee"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
