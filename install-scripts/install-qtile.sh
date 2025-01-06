@@ -20,9 +20,9 @@ git clone https://github.com/Bluetooth-Devices/dbus-fast.git
 
 #installing qtile and other packages
 bin/pip install qtile/
-bin/pip install pulsectl/
-bin/pip install pulsectl_asyncio/
-bin/pip install qtile-extras/
+bin/pip install pulsectl
+bin/pip install pulsectl_asyncio
+bin/pip install qtile-extras
 bin/pip install dbus-fast
 
 #copying qtile binary file into ~/.local/bin
@@ -30,17 +30,17 @@ mkdir ~/.local/bin/
 cp ~/.local/src/qtile_venv/bin/qtile ~/.local/bin/
 
 #creating a config file and a backgrounds folder
-mkdir ~/.config/qtile/
+mkdir -r  ~/.config/qtile/
 cd ~/.config/qtile/
 touch config.py
 mkdir backgrounds/
 
 #copying config files and background folders into the new destinations
-cp ~/qtile_vbox/qtile/config.py ~/.config/qtile/config.py
-cp ~/qtile_vbox/qtile/autostart.sh ~/.config/qtile/autostart.sh
-cp ~/qtile_vbox/qtile/backgrounds ~/.config/qtile/backgrounds/ 
+cp ~/qtile_vbox/qtile/config/config.py ~/.config/qtile/config.py
+cp ~/qtile_vbox/qtile/config/autostart.sh ~/.config/qtile/autostart.sh
+cp ~/qtile_vbox/qtile/config/backgrounds ~/.config/qtile/backgrounds/ 
 
 #removing the installation package
-rm -r ~/qtile_vbox/
+rm -r ~/qtile_vbox/ 
 
  

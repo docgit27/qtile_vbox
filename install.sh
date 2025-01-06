@@ -25,13 +25,13 @@ fi
 
 #executing the scripts
 echo "Installing Xorg..."
-bash ~/qtile_vbox/install_scripts/install-xorg.sh
+bash ~/qtile_vbox/install-scripts/install-xorg.sh
 echo "Installing basic packages..."
-bash ~/qtile_vbox/install_scripts/install-basicpackages.sh
+bash ~/qtile_vbox/install-scripts/install-basicpackages.sh
 echo "Installing qtile..."
-bash ~/qtile_vbox/install_scripts/install-qtile.sh
+bash ~/qtile_vbox/install-scripts/install-qtile.sh
 echo "Installing picom"
-bash ~/qtile_vbox/install_scripts/install-picom.sh
+bash ~/qtile_vbox/install-scripts/install-picom.sh
 
 
 
