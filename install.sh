@@ -24,8 +24,6 @@ else
     exit 1
 fi
 
-clear
-
 #executing the scripts
 echo "Installing Xorg..."
 bash ~/qtile_vbox/install_scripts/install-xorg.sh
@@ -36,5 +34,5 @@ bash ~/qtile_vbox/install_scripts/install-qtile.sh
 echo "Installing picom"
 bash ~/qtile_vbox/install_scripts/install-picom.sh
 
-clear
+
 
