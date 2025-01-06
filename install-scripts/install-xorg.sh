@@ -35,12 +35,12 @@ clear
 echo "Configuring Xorg..."
 cd /etc/X11/
 Xorg -configure
-#follow the instructions on the screen
 
 #creating a ~/.xinitrc file to startx
-cd
-touch .xinitrc
-echo "#!/bin/bash" > ~/.xinitrc
-echo "exec qtile start" > ~/.xinitrc
+touch ~/.xinitrc
+set +H  #disabling history expansion temporarily
+printf "#!/bin/bash/\nexec qtile start\n" > ~/.xinitrc
+set -H  #enabling history expansion
+chmod +x ~/.xinitrc 
 
 clear 
