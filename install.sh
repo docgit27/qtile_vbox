@@ -32,6 +32,11 @@ echo "Installing qtile..."
 bash ~/qtile_vbox/install-scripts/install-qtile.sh
 echo "Installing picom"
 bash ~/qtile_vbox/install-scripts/install-picom.sh
+echo "Copying and setting the configuration files"
+bash ~/qtile_vbox/install-scripts/setup.sh
+
+clear
+
 
 
 

@@ -25,17 +25,3 @@ bin/pip install pulsectl_asyncio
 bin/pip install qtile-extras
 bin/pip install dbus-fast
 
-#copying qtile binary file into ~/.local/bin
-mkdir ~/.local/bin/
-cp ~/.local/src/qtile_venv/bin/qtile ~/.local/bin/
-
-#creating a config file and a backgrounds folder
-mkdir -p ~/.config/qtile/
-
-#copying config files and background folders into the new destinations
-cp ~/qtile_vbox/qtile/config/. ~/.config 
-
-#removing the installation package
-rm -r ~/qtile_vbox/ 
-
- 
