@@ -11,8 +11,9 @@
     foreground_color = "#00ff00"
     scrollbar_position = hidden
     scrollback_infinite = True
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
+    bold_is_bright = True
   [[atelier forest]]
     icon_bell = False
     background_color = "#1B1918"
@@ -26,10 +27,21 @@
     use_system_font = False
 [layouts]
   [[default]]
-    [[[window0]]]
+    [[[child0]]]
       type = Window
       parent = ""
-    [[[child1]]]
+      order = 0
+      position = 0:24
+      maximised = False
+      fullscreen = False
+      size = 762, 834
+      title = /bin/bash
+      last_active_term = 3fed0ed5-5eb1-4a26-b7d5-8414d819b7fe
+      last_active_window = True
+    [[[terminal1]]]
       type = Terminal
-      parent = window0
+      parent = child0
+      order = 0
+      profile = default
+      uuid = 3fed0ed5-5eb1-4a26-b7d5-8414d819b7fe
 [plugins]

@@ -18,8 +18,13 @@ if ! command -v git &> /dev/null; then
         echo "Git installation failed. Please install Git manually and run this script again."
         exit 1
     fi
+
+else 
+    echo "Git already installed. Continuing the installation process..."
+    exit 1
 fi
 
+clear
 
 #executing the scripts
 echo "Installing Xorg..."
@@ -28,3 +33,8 @@ echo "Installing basic packages..."
 bash ~/qtile_vbox/install_scripts/install-basicpackages.sh
 echo "Installing qtile..."
 bash ~/qtile_vbox/install_scripts/install-qtile.sh
+echo "Installing picom"
+bash ~/qtile_vbox/install_scripts/install-picom.sh
+
+clear
+
