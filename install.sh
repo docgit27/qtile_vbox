@@ -19,6 +19,10 @@ if ! command -v git &> /dev/null; then
         exit 1
     fi
 
+else
+     echo "Git already installed. Continuing the installation process..."
+fi
+
 #executing the scripts
 echo "Installing Xorg..."
 bash ~/qtile_vbox/install_scripts/install-xorg.sh
