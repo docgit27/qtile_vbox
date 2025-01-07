@@ -33,6 +33,8 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from libqtile.layout import Floating
 
+
+
 @hook.subscribe.startup_once
 #or @hootk.subscribe.startup if at every restart of qtile
 def autostart():
@@ -57,7 +59,6 @@ keys = [
     Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -101,14 +102,14 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # DmenuRun
     Key([mod], "d", lazy.run_extension(extension.DmenuRun(
-    	dmenu_prompt="launch a program: ",
-	dmenu_font="Andika-10",
-	background="#000000",
-	foreground="#f22c40",
-	selected_background="#94090d",
-	selected_foreground="#ffffff",
-	dmenu_command="dmenu_run",
-	dmenu_bottom=True,
+    	dmenu_prompt = "launch a program: ",
+	dmenu_font = "Andika-10",
+	background = "#000000",
+	foreground = "#f22c40",
+	selected_background = "#94090d",
+	selected_foreground = "#ffffff",
+	dmenu_command = "dmenu_run",
+	dmenu_bottom = True,
     ))),
 ]
 
@@ -156,6 +157,7 @@ layouts = [
     layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=3),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
+    layout.TreeTab(),
     layout.Stack(num_stacks=2),
     layout.Bsp(),
     layout.Matrix(),
@@ -163,7 +165,6 @@ layouts = [
     layout.MonadWide(),
     layout.RatioTile(),
     layout.Tile(),
-    layout.TreeTab(),
     layout.VerticalTile(),
     layout.Zoomy(),
     layout.Floating(),
@@ -172,10 +173,11 @@ layouts = [
     layout.MonadThreeCol()
 ]
 
+
 widget_defaults = dict(
-    font="Noto Sans",
-    fontsize=12,
-    padding=3,
+    font = "Noto Sans",
+    fontsize = 12,
+    padding = 3,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -186,7 +188,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(fmt = "Layout: <i>{}</i>"),
-                widget.Spacer(length = 7), 
+                widget.Spacer(length = 7),
 	        widget.GroupBox(),
 		widget.Prompt(record_history=True),
                 widget.Chord(
@@ -202,14 +204,14 @@ screens = [
                 widget.Systray(),
 		widget.Spacer(length = 20),
 		widget.CryptoTicker(currency = "eur"),
-		widget.Spacer(length = 210),
+		widget.Spacer(length = 100),
 		widget.Memory(fmt = "RAM {}"),
 		widget.Spacer(length = 20),
 		widget.DF(visible_on_warn = False, format = "DF({p}): {f}Gb/{s}Gb"),
                 widget.HDDBusyGraph(),
 		widget.CPU(),
 		widget.CPUGraph(start_pos = "bottom", line_width = 1, fill_color = "#43a047", graph_color = "#43a047", border_color = "#168039", border_width = 1),
-                widget.Net(interface = "enp0S3", format = "{down: 6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}"),
+                widget.Net(interface = "enp0s3", format = "{down: 6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}"),
 		widget.Clock(format=" %a %d-%m-%Y  %H:%M "),
 		widget.PulseVolume(channel = "master", fmt = "Vol {}"),
 		widget.Spacer(length = 5),
