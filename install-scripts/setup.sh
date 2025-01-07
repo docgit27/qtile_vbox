@@ -19,12 +19,12 @@ fi
 cp ~/qtile_vbox/config/. ~/.config 
 
 #copying .bashrc into his new destination
-cp ~/.config/.bashrc ~
+cp ~/config/.bashrc ~
 
 #creating a ~/.xinitrc file to startx
 touch ~/.xinitrc
 set +H  #disabling history expansion temporarily
-printf "#!/bin/bash/\nexec qtile start\n" > ~/.xinitrc
+printf "#!/bin/bash/\nqtile start\n" > ~/.xinitrc
 set -H  #enabling history expansion
 chmod +x ~/.xinitrc 
 
