@@ -16,10 +16,10 @@ else
 fi
 
 #copying config files into the new destination
-cp ~/qtile_vbox/config/. ~/.config 
+cp -r ~/qtile_vbox/config/. ~/.config 
 
 #copying .bashrc into his new destination
-cp ~/config/.bashrc ~
+cp ~/qtile_vbox/config/.bashrc ~
 
 #creating a ~/.xinitrc file to startx
 touch ~/.xinitrc
