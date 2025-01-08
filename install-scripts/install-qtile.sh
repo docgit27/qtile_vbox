@@ -13,6 +13,7 @@ python3 -m venv qtile_venv
 #cloning qtile and others packages from git
 cd qtile_venv/
 git clone https://github.com/qtile/qtile.git
+git clone https://github.com/giampaolo/psutil.git
 git clone https://github.com/mk-fg/python-pulse-control.git
 git clone https://github.com/mhthies/pulsectl-asyncio.git
 git clone https://github.com/elParaguayo/qtile-extras.git
@@ -20,6 +21,7 @@ git clone https://github.com/Bluetooth-Devices/dbus-fast.git
 
 #installing qtile and other packages
 bin/pip install qtile
+bin/pip install psutil
 bin/pip install pulsectl
 bin/pip install pulsectl_asyncio
 bin/pip install qtile-extras

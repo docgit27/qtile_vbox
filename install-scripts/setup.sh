@@ -28,5 +28,3 @@ printf "#!/bin/bash/\nqtile start\n" > ~/.xinitrc
 set -H  #enabling history expansion
 chmod +x ~/.xinitrc 
 
-#removing qtile_vbox directory
-rm -r ~/qtile_vbox
