@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 
 export PS1="\w >"
+export PATH = "$PATH:/.local/bin/"
